@@ -3,7 +3,7 @@
 Code for the TMLR 2026 paper:
 
 **Causal Emotion Recognition in Conversation: Context Saturation and Discourse-Marker Evidence**  
-Cheonkam Jeong and Adeline Nyamathi
+Cheonkam Jeong (cheonkamjeong@gmail.com) and Adeline Nyamathi
 
 This repository contains code for reproducing the main text-only ERC experiments and linguistic analyses:
 
