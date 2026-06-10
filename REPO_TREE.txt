@@ -1,0 +1,170 @@
+causal-erc-context-saturation/
+├── data/
+│   ├── derived/
+│   │   └── README.md
+│   └── README.md
+├── docs/
+│   └── GUIDE_n10_experiments.md
+├── legacy/
+│   ├── features/
+│   │   ├── external/
+│   │   │   └── README.md
+│   │   ├── README.md
+│   │   ├── sroberta_module.py
+│   │   └── wnaffect_module.py
+│   └── models/
+│       ├── bayesian_modules.py
+│       ├── README.md
+│       ├── sequential_bayesian.py
+│       └── simple_bayesian.py
+├── paper/
+│   └── citation.bib
+├── results/
+│   ├── figures/
+│   │   └── .gitkeep
+│   ├── summary_tables/
+│   │   └── .gitkeep
+│   └── README.md
+├── scripts/
+│   ├── ablation/
+│   │   ├── aggregate_component_results.py
+│   │   └── train_component_ablation.py
+│   ├── analyze/
+│   │   ├── supplementary/
+│   │   │   ├── analyze_discourse_markers.py
+│   │   │   ├── analyze_information_theory_gpu_axes.py
+│   │   │   ├── analyze_information_theory_signif.py
+│   │   │   ├── analyze_marker_correlation.py
+│   │   │   ├── analyze_tau_rel_posthoc.py
+│   │   │   ├── analyze_tau_rel_posthoc_log.py
+│   │   │   ├── analyze_tau_rel_stats.py
+│   │   │   ├── fig_comparison_discourse_markers.py
+│   │   │   ├── information_theory_analysis.py
+│   │   │   ├── information_theory_multiseed_analysis.py
+│   │   │   └── make_table3_marker_summary.py
+│   │   ├── aggregate_all_results_n10.py
+│   │   ├── aggregate_all_turnlevel_results.py
+│   │   ├── analyze_context_thresholds.py
+│   │   ├── analyze_context_thresholds_hard.py
+│   │   ├── analyze_discourse_marker_positions_final.py
+│   │   ├── analyze_emotion_saturation.py
+│   │   ├── analyze_information_flow.py
+│   │   ├── analyze_kstar_stats_pairwise.py
+│   │   ├── analyze_sentences_iemocap.py
+│   │   ├── compute_classwise_f1.py
+│   │   ├── extract_all_multiseed_results.py
+│   │   ├── make_fig_kstar_full.py
+│   │   ├── merge_data_for_dm_analysis.py
+│   │   └── summarize_turnlevel_results.py
+│   ├── fusion/
+│   │   ├── analyze_senticnet_results.py
+│   │   ├── collect_senticnet_results.py
+│   │   ├── make_sentic_fusion_hierarchical_npz.py
+│   │   ├── run_all_gpus.sh
+│   │   ├── run_gpu0_bert.sh
+│   │   ├── run_gpu1_roberta.sh
+│   │   ├── run_gpu2_sentence_roberta.sh
+│   │   ├── run_senticnet_parallel.py
+│   │   ├── run_senticnet_parallel_clear_gpu.py
+│   │   └── run_senticnet_parallel_with_alpha.py
+│   ├── generate/
+│   │   ├── auto_generate_embeddings.sh
+│   │   ├── generate_all_flat_embeddings.sh
+│   │   ├── generate_base_4way.sh
+│   │   ├── generate_base_6way.sh
+│   │   ├── generate_bert_base_hier_npz_4way.py
+│   │   ├── generate_bert_base_hier_npz_6way.py
+│   │   ├── generate_bert_base_npz_4way.py
+│   │   ├── generate_bert_base_npz_6way.py
+│   │   ├── generate_roberta_base_hier_npz_4way.py
+│   │   ├── generate_roberta_base_hier_npz_6way.py
+│   │   ├── generate_roberta_base_npz_4way.py
+│   │   ├── generate_roberta_base_npz_6way.py
+│   │   ├── generate_senticnet_sentence_level_4way.py
+│   │   ├── generate_senticnet_sentence_level_6way.py
+│   │   ├── generate_sroberta_hier_dm_npz.py
+│   │   ├── generate_sroberta_hier_npz_4way.py
+│   │   ├── generate_sroberta_hier_npz_6way.py
+│   │   ├── generate_sroberta_hier_npz_meld.py
+│   │   ├── generate_sroberta_npz_4way.py
+│   │   ├── generate_sroberta_npz_6way.py
+│   │   └── generate_sroberta_npz_meld.py
+│   ├── optimization/
+│   │   ├── bayesian_flat_optimization.py
+│   │   ├── bayesian_hyperparameter_optimization.py
+│   │   ├── bayesian_turnlevel_optimization.py
+│   │   └── train_turn_classifier.py
+│   ├── run/
+│   │   ├── cluster/
+│   │   │   ├── gpu0_4way_mlp.sh
+│   │   │   ├── gpu1_4way_lstm.sh
+│   │   │   ├── gpu2_6way_mlp.sh
+│   │   │   ├── gpu3_6way_lstm.sh
+│   │   │   ├── run_10seeds_parallel.sh
+│   │   │   ├── run_bayesian_optimization.sh
+│   │   │   ├── run_bert_roberta_flat.sh
+│   │   │   ├── run_hier_default_remaining.sh
+│   │   │   ├── run_hier_multiseed_mean.sh
+│   │   │   ├── run_k_sweep_quick.sh
+│   │   │   ├── run_k_sweep_quick_scan_k200.sh
+│   │   │   ├── run_k_sweep_quick_v2.sh
+│   │   │   ├── run_minimal_baseline.sh
+│   │   │   └── test_default_params.sh
+│   │   ├── flat/
+│   │   │   ├── run_n10_gpu0_4way_mlp.sh
+│   │   │   ├── run_n10_gpu1_4way_lstm.sh
+│   │   │   ├── run_n10_gpu2_6way_mlp.sh
+│   │   │   └── run_n10_gpu3_6way_lstm.sh
+│   │   ├── hierarchical/
+│   │   │   ├── run_n10_hier_gpu0_4way.sh
+│   │   │   ├── run_n10_hier_gpu0_4way_bert.sh
+│   │   │   ├── run_n10_hier_gpu1_4way.sh
+│   │   │   ├── run_n10_hier_gpu1_4way_roberta.sh
+│   │   │   ├── run_n10_hier_gpu2_6way.sh
+│   │   │   └── run_n10_hier_gpu3_6way.sh
+│   │   ├── README.md
+│   │   ├── run_all_n10_flat.sh
+│   │   └── run_all_n10_hier.sh
+│   ├── train/
+│   │   ├── legacy/
+│   │   │   ├── train_baseline_classifier_ablation.py
+│   │   │   ├── train_npz_classifier_6way_lexical.py
+│   │   │   ├── train_npz_classifier_lexical.py
+│   │   │   ├── train_turnlevel_k_sweep_norm_full.py
+│   │   │   ├── train_turnlevel_k_sweep_norm_per_emotion.py
+│   │   │   ├── train_turnlevel_k_sweep_old.py
+│   │   │   └── train_turnlevel_k_sweep_shuffle.py
+│   │   ├── turn/
+│   │   │   ├── train_turnlevel_k_sweep_comprehensive.py
+│   │   │   ├── train_turnlevel_k_sweep_main.py
+│   │   │   └── train_turnlevel_k_sweep_savepreds.py
+│   │   ├── train_npz_classifier_4way.py
+│   │   ├── train_npz_classifier_6way.py
+│   │   ├── train_npz_hier_classifier.py
+│   │   ├── train_npz_hier_classifier_4way.py
+│   │   ├── train_npz_hier_classifier_6way.py
+│   │   └── train_npz_hier_fused_classifier.py
+│   ├── utils/
+│   │   ├── add_labels_to_npz.py
+│   │   ├── check_npz_structure.py
+│   │   └── compare_flat_hier_embeddings.py
+│   └── visualize/
+│       ├── visualize_all_results.py
+│       └── visualize_pooling_weights.py
+├── src/
+│   └── senticcrystal/
+│       ├── models/
+│       │   ├── __init__.py
+│       │   └── classifiers.py
+│       ├── utils/
+│       │   ├── __init__.py
+│       │   ├── device_utils.py
+│       │   ├── focal_loss.py
+│       │   └── preprocessing.py
+│       └── __init__.py
+├── .gitignore
+├── environment.yml
+├── LICENSE
+├── pyproject.toml
+├── README.md
+└── requirements.txt
